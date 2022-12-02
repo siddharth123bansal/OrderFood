@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/categories"
+    android:title="Categories"/>
+    <item
+        android:id="@+id/Orders"
+        android:title="Your Orders"/>
+    <item
+        android:id="@+id/Wishlist"
+        android:title="Wishlist"/>
+    <item
+        android:id="@+id/faqs"
+        android:title="FAQs"/>
+    <item
+        android:id="@+id/LogOut"
+        android:title="Log Out"/>
+</menu>
