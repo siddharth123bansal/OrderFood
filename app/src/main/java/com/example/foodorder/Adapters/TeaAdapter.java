@@ -35,8 +35,12 @@ public class TeaAdapter extends RecyclerView.Adapter<TeaAdapter.viewHolder>{
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         TeaModel tea= list.get(position);
+        holder.book.setVisibility(View.GONE);
         holder.img.setImageResource(tea.getImg());
         holder.txt.setText(tea.getName());
+        if(tea.getName().toString().equals("Lemon Tea")){
+            holder.book.setVisibility(View.VISIBLE);
+        }else holder.book.setVisibility(View.GONE);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,12 +58,13 @@ public class TeaAdapter extends RecyclerView.Adapter<TeaAdapter.viewHolder>{
     }
 
     public class viewHolder extends RecyclerView.ViewHolder{
-        ImageView img;
+        ImageView img,book;
         TextView txt;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             img=itemView.findViewById(R.id.teaImg);
             txt=itemView.findViewById(R.id.teaName);
+            book=itemView.findViewById(R.id.Bookmark);
         }
     }
 }
